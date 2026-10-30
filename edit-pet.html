@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Luna’s profile | PawHaven</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pet-form.css">
+</head>
+
+<body>
+    <main class="pet-form-page">
+        <div class="pet-form-main">
+
+            <a class="pet-form-back" href="admin-dashboard.html">
+                ← Back to manage pets
+            </a>
+
+            <header class="pet-form-title">
+                <span class="pet-form-eyebrow">Pet profile</span>
+                <h1>Edit Luna’s profile</h1>
+                <p>Update public details, care notes, and availability.</p>
+            </header>
+
+            <form class="pet-form-card" action="#" method="post"
+                  enctype="multipart/form-data">
+
+                <section class="pet-form-section">
+                    <h2>Pet photos</h2>
+                    <p>Add clear photos to help potential adopters get to know this pet.</p>
+
+                    <input class="pet-file-input" type="file"
+                           id="pet-photos" name="petPhotos"
+                           accept="image/png,image/jpeg" multiple>
+
+                    <label class="pet-photo-upload" for="pet-photos">
+                        <span class="pet-upload-symbol">+</span>
+                        <strong>Change pet photos</strong>
+                        <span>Choose JPG or PNG files · Up to 10 MB each</span>
+                    </label>
+                </section>
+
+                <section class="pet-form-section">
+                    <h2>Basic information</h2>
+                    <p>Keep the pet’s details accurate and up to date.</p>
+
+                    <div class="pet-form-grid">
+
+                        <label class="pet-field">
+                            <span>Pet name <b>*</b></span>
+                            <input type="text" name="petName"
+                                   value="Luna" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Pet ID</span>
+                            <input type="text" name="petId"
+                                   value="PH-1042" readonly>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Species <b>*</b></span>
+                            <select name="species" required>
+                                <option value="" disabled>Select species</option>
+                                <option value="dog" selected>Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Breed <b>*</b></span>
+                            <input type="text" name="breed"
+                                   value="Shepherd mix" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Age <b>*</b></span>
+                            <input type="number" name="age" min="0" max="100"
+                                   value="2" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Status <b>*</b></span>
+                            <select name="status" required>
+                                <option value="" disabled>Select status</option>
+                                <option value="available" selected>Available</option>
+                                <option value="pending">Pending</option>
+                                <option value="adopted">Adopted</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </section>
+
+                <section class="pet-form-section">
+                    <h2>About this pet</h2>
+                    <p>Share their personality, favorite activities, and ideal home.</p>
+
+                    <label class="pet-field">
+                        <span>Description <b>*</b></span>
+                        <textarea name="description" rows="6" required> Luna is a gentle, affectionate dog who loves sunny afternoons, long walks, and being around people. She would thrive in a loving home that can give her plenty of attention.</textarea>
+                    </label>
+                </section>
+
+                <div class="pet-form-actions">
+                    <a class="pet-form-button secondary"
+                       href="manage-pets.html">Cancel</a>
+
+                    <button class="pet-form-button primary" type="submit">
+                        Save changes <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>

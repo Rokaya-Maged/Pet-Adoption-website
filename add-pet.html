@@ -3,190 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Pet | PawHaven</title>
-    <link rel="stylesheet" href="css/admin-pets.css">
+    <title>Add a new pet | PawHaven</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pet-form.css">
 </head>
-<body class="add-pet-page">
 
-    <main class="add-pet-main">
+<body>
+    <main class="pet-form-page">
+        <div class="pet-form-main">
 
-        <a href="admin-dashboard.html" class="back-link">
-            &larr; Back to dashboard
-        </a>
+            <a class="pet-form-back" href="admin-dashboard.html">
+                ← Back to manage pets
+            </a>
 
-        <div class="add-pet-heading">
-            <div>
-                <p class="page-eyebrow">PET MANAGEMENT</p>
+            <header class="pet-form-title">
+                <span class="pet-form-eyebrow">Pet profile</span>
                 <h1>Add a new pet</h1>
-                <p class="page-description">
-                    Create a complete profile to help the right family connect.
-                </p>
-            </div>
-        </div>
+                <p>Create a complete profile to help the right family connect.</p>
+            </header>
 
-        <form class="add-pet-form" action="#" method="post"
-              enctype="multipart/form-data">
+            <form class="pet-form-card" action="#" method="post"
+                  enctype="multipart/form-data">
 
-            <!-- Photo upload -->
-            <section class="form-section">
-                <h2>Pet photos</h2>
-                <p class="section-description">
-                    Add a clear photo to help potential adopters meet their new friend.
-                </p>
+                <section class="pet-form-section">
+                    <h2>Pet photos</h2>
+                    <p>Add clear photos to help potential adopters get to know this pet.</p>
 
-                <label for="pet-photos" class="photo-upload">
-                    <span class="upload-icon">+</span>
-                    <span class="upload-title">Upload pet photos</span>
-                    <span class="upload-description">
-                        Click to browse your files
-                    </span>
-                    <span class="upload-hint">JPG or PNG · Up to 10 MB</span>
-                </label>
+                    <input class="pet-file-input" type="file"
+                           id="pet-photos" name="petPhotos"
+                           accept="image/png,image/jpeg" multiple>
 
-                <input type="file" id="pet-photos" name="petPhotos" accept=".jpg,.jpeg,.png,image/jpeg,image/png"
-                    class="file-input" multiple>
-            </section>
+                    <label class="pet-photo-upload" for="pet-photos">
+                        <span class="pet-upload-symbol">+</span>
+                        <strong>Add pet photos</strong>
+                        <span>Choose JPG or PNG files · Up to 10 MB each</span>
+                    </label>
+                </section>
 
-            <hr class="form-divider">
+                <section class="pet-form-section">
+                    <h2>Basic information</h2>
+                    <p>Keep the pet’s details accurate and up to date.</p>
 
-            <section class="form-section">
-                <h2>Basic information</h2>
-                <p class="section-description">
-                    Tell us a little about this pet.
-                </p>
+                    <div class="pet-form-grid">
 
-                <div class="pet-form-grid">
+                        <label class="pet-field">
+                            <span>Pet name <b>*</b></span>
+                            <input type="text" name="petName"
+                                   placeholder="e.g. Luna" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Pet ID</span>
+                            <input type="text" name="petId"
+                                   value="Auto-generated when saved" readonly>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Species <b>*</b></span>
+                            <select name="species" required>
+                                <option value="" disabled selected>Select species</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Breed <b>*</b></span>
+                            <input type="text" name="breed"
+                                   placeholder="e.g. Shepherd mix" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Age <b>*</b></span>
+                            <input type="number" name="age" min="0" max="100"
+                                   placeholder="Age in years" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Status <b>*</b></span>
+                            <select name="status" required>
+                                <option value="" disabled selected>Select status</option>
+                                <option value="available">Available</option>
+                                <option value="pending">Pending</option>
+                                <option value="adopted">Adopted</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </section>
+
+                <section class="pet-form-section">
+                    <h2>About this pet</h2>
+                    <p>Share their personality, favorite activities, and ideal home.</p>
 
                     <label class="pet-field">
-                        <span>Pet name <b>*</b></span>
-                        <input
-                            type="text"
-                            name="petName"
-                            placeholder="e.g. Luna"
-                            required
-                        >
+                        <span>Description <b>*</b></span>
+                        <textarea name="description" rows="6" required
+                            placeholder="Describe their personality, favorite things, and ideal home."></textarea>
                     </label>
+                </section>
 
-                    <label class="pet-field">
-                        <span>Pet ID</span>
-                        <input
-                            type="text"
-                            name="petId"
-                            placeholder="Generated automatically"
-                            readonly
-                        >
-                        <small>Assigned when the pet is saved.</small>
-                    </label>
+                <div class="pet-form-actions">
+                    <a class="pet-form-button secondary"
+                       href="manage-pets.html">Cancel</a>
 
-                    <label class="pet-field">
-                        <span>Species <b>*</b></span>
-                        <select name="species" required>
-                            <option value="" disabled selected>
-                                Select species
-                            </option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                            <option value="rabbit">Rabbit</option>
-                            <option value="bird">Bird</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </label>
-
-                    <label class="pet-field">
-                        <span>Breed <b>*</b></span>
-                        <input
-                            type="text"
-                            name="breed"
-                            placeholder="e.g. Shepherd mix"
-                            required
-                        >
-                    </label>
-
-                    <label class="pet-field">
-                        <span>Age <b>*</b></span>
-                        <input
-                            type="number"
-                            name="age"
-                            min="0"
-                            max="100"
-                            placeholder="Age in years"
-                            required
-                        >
-                    </label>
-
-                    <label class="pet-field">
-                        <span>Gender <b>*</b></span>
-                        <select name="gender" required>
-                            <option value="" disabled selected>
-                                Select gender
-                            </option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
-                    </label>
-
-                    <label class="pet-field">
-                        <span>Size</span>
-                        <select name="size">
-                            <option value="" disabled selected>
-                                Select size
-                            </option>
-                            <option value="small">Small</option>
-                            <option value="medium">Medium</option>
-                            <option value="large">Large</option>
-                        </select>
-                    </label>
-
-                    <label class="pet-field">
-                        <span>Adoption status <b>*</b></span>
-                        <select name="status" required>
-                            <option value="" disabled selected>
-                                Select status
-                            </option>
-                            <option value="available">Available</option>
-                            <option value="pending">Pending</option>
-                            <option value="adopted">Adopted</option>
-                        </select>
-                    </label>
-
+                    <button class="pet-form-button primary" type="submit">
+                        Publish pet profile <span aria-hidden="true">→</span>
+                    </button>
                 </div>
-            </section>
 
-            <hr class="form-divider">
-
-            <!-- Pet description -->
-            <section class="form-section">
-                <h2>About this pet</h2>
-                <p class="section-description">
-                    Share their personality, favorite activities, and ideal home.
-                </p>
-
-                <label class="pet-field">
-                    <span>Description <b>*</b></span>
-                    <textarea
-                        name="description"
-                        rows="5"
-                        placeholder="Tell potential adopters what makes this pet special..."
-                        required
-                    ></textarea>
-                </label>
-            </section>
-
-            <!-- Form actions -->
-            <div class="pet-form-actions">
-                <a href="admin-dashboard.html" class="cancel-pet-btn">
-                    Cancel
-                </a>
-
-                <button type="submit" class="publish-pet-btn">
-                    Publish pet profile
-                    <span aria-hidden="true">&rarr;</span>
-                </button>
-            </div>
-
-        </form>
+            </form>
+        </div>
     </main>
-
 </body>
 </html>

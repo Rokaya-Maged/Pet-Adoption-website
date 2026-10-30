@@ -4,99 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard | PawHaven</title>
+
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/admin-pets.css">
 </head>
-<body>
-    <div class="dashboard">
-        <h1>Good Morning, Admin</h1>
-        <div class="dashboard-content">
-            <p>Here’s what’s happening at PawHaven today.</p>
-            <div class="add-pet-btn">
-                <img id="add-pet-icon" src="images/icons/plus-white.svg" alt="Add Pet">
-                <a href="add-pet.html" class="add-pet-link">Add pet</a>
+
+<body class="dashboard-page">
+
+    <main class="dashboard">
+
+        <span class="dashboard-date">October 30, 2026</span>
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div>
+                <h1>Good Morning, Admin</h1>
+                <p>Here's what's happening at PawHaven today.</p>
             </div>
-        </div>
-    </div>
-    <section class="stats-cards">
-        <div class="stat-card">
-            <img id="paw-icon" src="images/icons/paw-green.svg" alt="Total Pets">
-            <h2>18</h2>
-            <p>Available Pets</p>
-        </div>
-        <div class="stat-card">
-            <img id="heart-icon" src="images/icons/heart-red.svg" alt="Pending Adoptions">
-            <h2>7</h2>
-            <p>Pending Adoptions</p>
-        </div>
-        <div class="stat-card">
-            <img id="check-icon" src="images/icons/check-green.svg" alt="Adoptions">
-            <h2>12</h2>
-            <p>Adoptions this month</p>
-        </div>
-        <div class="stat-card">
-            <img id="check-icon" src="images/icons/check-green.svg" alt="Meetings">
-            <h2>4</h2>
-            <p>Meeting today</p>
-        </div>
-    </section>
 
-    <section class="applications-container">
-        <section class="left-app">
-            <div class="applications">
-                <h3>Applications awaiting review</h3>
-                <a href="review-applications.html" class="view-all">View all</a>
-            </div>
-            <div class="applications-list">
-                <!-- Application 1 -->
-                <div class="application-item">
-                    <div class="applicant-avatar">L</div>
+            <a href="add-pet.html" class="add-pet-btn">
+                <img id="add-pet-icon" src="images/icons/plus-white.svg" alt="">
+                <span class="add-pet-link">Add pet</span>
+            </a>
+        </header>
 
-                    <div class="application-info">
-                        <h5>Luna</h5>
-                        <p>APP-2084 · May 18, 2025</p>
-                    </div>
+        <!-- Statistics -->
+        <section class="stats-cards">
 
-                    <span class="application-status pending">Pending</span>
+            <div class="stat-card">
+                <div class="stat-card-icon">
+                    <img id="paw-icon" src="images/icons/paw-green.svg" alt="Total pets">
                 </div>
+                <h2>18</h2>
+                <p>Available Pets</p>
+            </div>
 
-                <!-- Application 2 -->
-                <div class="application-item">
-                    <div class="applicant-avatar">M</div>
-
-                    <div class="application-info">
-                        <h5>Milo</h5>
-                        <p>APP-2011 · Apr 29, 2025</p>
-                    </div>
-
-                    <span class="application-status approved">Approved</span>
+            <div class="stat-card">
+                <div class="stat-card-icon">
+                    <img id="heart-icon" src="images/icons/heart-red.svg" alt="Pending adoptions">
                 </div>
+                <h2>7</h2>
+                <p>Pending Adoptions</p>
+            </div>
 
+            <div class="stat-card">
+                <div class="stat-card-icon">
+                    <img id="check-icon" src="images/icons/check-green.svg" alt="Adoptions">
+                </div>
+                <h2>12</h2>
+                <p>Adoptions this month</p>
             </div>
-        </section>
 
-        <section class="right-actions">
-            <h3>Quick Actions</h3>
-            <div class="action-item">
-                <img id="plus-icon" src="images/icons/plus-green.svg" alt="Add Pet">
-                <a href="add-pet.html" class="add-pet-link">Add a new pet</a>
-                <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="arrow">
-            </div>
-            <div class="action-item">
-                <img id="paw-icon" src="images/icons/paw-green.svg" alt="update">
-                <a href="edit-pet.html" class="add-pet-link">Update pet records</a>
-                <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="arrow">
-            </div>
-            <div class="action-item">
-                <img id="heart-icon-green" src="images/icons/heart-green.svg" alt="review">
-                <a href="review-application.html" class="add-pet-link">Review applications</a>
-                <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="arrow">
+            <div class="stat-card">
+                <div class="stat-card-icon">
+                    <img id="check-icon" src="images/icons/check-green.svg" alt="Meetings">
+                </div>
+                <h2>4</h2>
+                <p>Meetings today</p>
             </div>
 
         </section>
-    </section>
-    
-    
 
-    
+        <!-- Applications and Quick Actions -->
+        <section class="applications-container">
+
+            <!-- Applications -->
+            <section class="left-app">
+
+                <div class="applications">
+                    <h3>Applications awaiting review</h3>
+                    <a href="review-application.html" class="view-all">
+                        View all →
+                    </a>
+                </div>
+
+                <div class="applications-list">
+
+                    <div class="application-item">
+                        <div class="applicant-avatar">L</div>
+
+                        <div class="application-info">
+                            <h5>Luna</h5>
+                            <p>APP-2084 · May 18, 2025</p>
+                        </div>
+
+                        <span class="application-status pending">
+                            Pending
+                        </span>
+                    </div>
+
+                    <div class="application-item">
+                        <div class="applicant-avatar">M</div>
+
+                        <div class="application-info">
+                            <h5>Milo</h5>
+                            <p>APP-2011 · Apr 29, 2025</p>
+                        </div>
+
+                        <span class="application-status approved">
+                            Approved
+                        </span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Quick Actions -->
+            <aside class="right-actions">
+
+                <h3>Quick Actions</h3>
+
+                <div class="action-item">
+                    <img id="plus-icon" src="images/icons/plus-green.svg" alt="">
+                    <a href="add-pet.html" class="add-pet-link">
+                        Add a new pet
+                    </a>
+                     <a href="add-pet.html">
+                        <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="Go to Add Pet">
+                    </a>
+                </div>
+
+                <div class="action-item">
+                    <img id="paw-icon" src="images/icons/paw-green.svg" alt="">
+                    <a href="edit-pet.html" class="add-pet-link">
+                        Update pet records
+                    </a>
+                    <a href="edit-pet.html">
+                        <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="Go to Update Pet Records">
+                    </a>
+                </div>
+
+                <div class="action-item">
+                    <img id="heart-icon-green" src="images/icons/heart-green.svg" alt="">
+                    <a href="review-application.html" class="add-pet-link">
+                        Review applications
+                    </a>
+                    <a href="review-application.html">
+                        <img id="arrow-icon" src="images/icons/right-arrow-green.svg" alt="Go to Review Applications">
+                    </a>
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
