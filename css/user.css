@@ -358,3 +358,401 @@
     }
 }
 
+
+/* =========================================
+   PAWHAVEN ADOPTION APPLICATION PAGE
+   ========================================= */
+
+.adoption-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #f9f8f3;
+    color: #263b32;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.adoption-page *,
+.adoption-page *::before,
+.adoption-page *::after {
+    box-sizing: border-box;
+}
+
+/* TOP NAVIGATION */
+
+.site-header {
+    width: 100%;
+    min-height: 68px;
+    border-bottom: 1px solid #e8e8e1;
+    background: #fbfaf5;
+}
+
+.site-nav {
+    max-width: 1500px;
+    min-height: 68px;
+    margin: 0 auto;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.adoption-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #315d4d;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.adoption-brand .brand-icon {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    border-radius: 11px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #263b32;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #668b72;
+}
+
+.nav-links .logout-link {
+    padding: 10px 16px;
+    border: 1px solid #315d4d;
+    border-radius: 9px;
+}
+
+/* MAIN CONTENT */
+
+.adoption-main {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 54px 28px 70px;
+}
+
+/* HIDE OLD MULTI-STEP INDICATOR
+   The application is now a single-step form. */
+
+.progress-steps {
+    display: none;
+}
+
+/* PAGE HEADING */
+
+.adoption-heading {
+    margin-bottom: 30px;
+}
+
+.application-label {
+    margin: 0 0 12px;
+    color: #bd8372;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.adoption-heading h1 {
+    margin: 0 0 12px;
+    color: #315d4d;
+    font-size: clamp(36px, 4vw, 44px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.heading-description {
+    margin: 0;
+    color: #7a807b;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* APPLICATION CARD */
+
+.application-form.adoption-form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 38px;
+    border: 1px solid #e1e3dd;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 26px rgba(38, 59, 50, 0.06);
+}
+
+/* FORM SECTIONS */
+
+.form-section + .form-section {
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px solid #e5e6e0;
+}
+
+.form-section h2 {
+    margin: 0 0 22px;
+    color: #34473e;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/* TWO-COLUMN FIELD LAYOUT */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 24px;
+}
+
+.application-form.adoption-form .form-group {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.application-form.adoption-form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #263b32;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.application-form.adoption-form label span {
+    color: #a65d54;
+}
+
+/* INPUTS AND DROPDOWNS */
+
+.application-form.adoption-form input:not([type="checkbox"]),
+.application-form.adoption-form select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 13px 15px;
+    border: 1px solid #d4d5d0;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #263b32;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.application-form.adoption-form select {
+    cursor: pointer;
+}
+
+.application-form.adoption-form input:focus,
+.application-form.adoption-form select:focus,
+.application-form.adoption-form textarea:focus {
+    outline: none;
+    border-color: #638c75;
+    box-shadow: 0 0 0 3px rgba(99, 140, 117, 0.13);
+}
+
+/* REASON FOR ADOPTION */
+
+.application-form.adoption-form .reason-group {
+    margin-top: 24px;
+}
+
+.application-form.adoption-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 160px;
+    padding: 15px;
+    border: 1px solid #d4d5d0;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #263b32;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+.application-form.adoption-form textarea::placeholder {
+    color: #90958f;
+    opacity: 1;
+}
+
+/* CONFIRMATION CHECKBOX */
+
+.confirmation-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-top: 22px;
+}
+
+.application-form.adoption-form .confirmation-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+    flex: 0 0 18px;
+    margin: 3px 0 0;
+    padding: 0;
+    accent-color: #315d4d;
+    cursor: pointer;
+}
+
+.application-form.adoption-form .confirmation-group label {
+    margin: 0;
+    color: #66716a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e6e0;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    padding: 13px 28px;
+    border: 1px solid #315d4d;
+    border-radius: 10px;
+    background: #315d4d;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(49, 93, 77, 0.15);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #264a3d;
+    transform: translateY(-1px);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid #a9c9b4;
+    outline-offset: 3px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 800px) {
+    .site-nav {
+        padding: 12px 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .adoption-main {
+        max-width: 760px;
+        padding: 42px 24px 55px;
+    }
+
+    .application-form.adoption-form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+        padding: 14px 18px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .adoption-main {
+        padding: 32px 16px 42px;
+    }
+
+    .adoption-heading {
+        margin-bottom: 24px;
+    }
+
+    .adoption-heading h1 {
+        font-size: 34px;
+    }
+
+    .heading-description {
+        font-size: 16px;
+    }
+
+    .application-form.adoption-form {
+        padding: 23px 19px;
+    }
+
+    .form-section h2 {
+        font-size: 21px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .adoption-heading h1 {
+        font-size: 30px;
+    }
+
+    .application-form.adoption-form {
+        padding: 19px 15px;
+    }
+
+    .application-form.adoption-form label {
+        font-size: 14px;
+    }
+}
+
