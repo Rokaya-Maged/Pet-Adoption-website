@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Applications | PawHaven</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/admin-review.css">
+</head>
+
+<body class="manage-applications-page">
+
+    <!-- Admin Navigation -->
+    <header class="applications-header">
+        <a href="admin-dashboard.html" class="applications-brand">
+            <img src="images/icons/paw-green.svg" alt="">
+            <span>PawHaven</span>
+        </a>
+
+        <nav class="applications-nav" aria-label="Admin navigation">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-pets.html">Manage Pets</a>
+            <a href="manage-applications.html" class="active">Manage Applications</a>
+            <a href="login.html" class="applications-logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="applications-main">
+
+        <!-- Page Heading -->
+        <section class="applications-heading">
+            <div>
+                <span class="applications-eyebrow">SHELTER ADMINISTRATION</span>
+                <h1>Adoption Applications</h1>
+                <p>Review applications and help pets find their forever homes.</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="applications-back-link">
+                ← Back to Dashboard
+            </a>
+        </section>
+
+        <!-- Application Summary -->
+        <section class="application-stats" aria-label="Application summary">
+
+            <article class="application-stat-card">
+                <div class="stat-icon stat-icon-total" aria-hidden="true">▤</div>
+                <div>
+                    <p>Total Applications</p>
+                    <h2>24</h2>
+                </div>
+            </article>
+
+            <article class="application-stat-card">
+                <div class="stat-icon stat-icon-pending" aria-hidden="true">◷</div>
+                <div>
+                    <p>Pending Review</p>
+                    <h2>8</h2>
+                </div>
+            </article>
+
+            <article class="application-stat-card">
+                <div class="stat-icon stat-icon-approved" aria-hidden="true">✓</div>
+                <div>
+                    <p>Approved</p>
+                    <h2>12</h2>
+                </div>
+            </article>
+
+            <article class="application-stat-card">
+                <div class="stat-icon stat-icon-rejected" aria-hidden="true">×</div>
+                <div>
+                    <p>Rejected</p>
+                    <h2>4</h2>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Applications Table -->
+        <section class="applications-panel">
+
+            <div class="applications-panel-heading">
+                <div>
+                    <h2>All Applications</h2>
+                    <p>View and manage adoption requests submitted to your shelter.</p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <form class="application-filters" action="#" method="get">
+
+                <div class="application-filter-field">
+                    <label for="application-search">Search</label>
+                    <input
+                        type="search"
+                        id="application-search"
+                        name="search"
+                        placeholder="Search by applicant, pet, or ID">
+                </div>
+
+                <div class="application-filter-field">
+                    <label for="application-status">Application Status</label>
+                    <select id="application-status" name="status">
+                        <option value="">All statuses</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="application-filter-field">
+                    <label for="application-date">Submission Date</label>
+                    <select id="application-date" name="date">
+                        <option value="">Any time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This week</option>
+                        <option value="month">This month</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="application-filter-button">
+                    Apply Filters
+                </button>
+
+            </form>
+
+            <!-- Table -->
+            <div class="applications-table-wrapper">
+                <table class="applications-table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Application ID</th>
+                            <th scope="col">Applicant</th>
+                            <th scope="col">Pet</th>
+                            <th scope="col">Submitted</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="application-id">#APP-1024</td>
+                            <td>
+                                <div class="applicant-cell">
+                                    <span class="applicant-avatar">SM</span>
+                                    <div>
+                                        <strong>Sarah Mohamed</strong>
+                                        <small>sarah@example.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="application-pet-cell">
+                                    <strong>Buddy</strong>
+                                    <small>Golden Retriever</small>
+                                </div>
+                            </td>
+                            <td>Oct 28, 2026</td>
+                            <td><span class="application-status pending">Pending</span></td>
+                            <td>
+                                <a href="review-application.html" class="application-review-link">
+                                    Review →
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="application-id">#APP-1023</td>
+                            <td>
+                                <div class="applicant-cell">
+                                    <span class="applicant-avatar">AM</span>
+                                    <div>
+                                        <strong>Ahmed Mostafa</strong>
+                                        <small>ahmed@example.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="application-pet-cell">
+                                    <strong>Luna</strong>
+                                    <small>Persian Cat</small>
+                                </div>
+                            </td>
+                            <td>Oct 27, 2026</td>
+                            <td><span class="application-status approved">Approved</span></td>
+                            <td>
+                                <a href="review-application.html" class="application-review-link">
+                                    View →
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="application-id">#APP-1022</td>
+                            <td>
+                                <div class="applicant-cell">
+                                    <span class="applicant-avatar">NH</span>
+                                    <div>
+                                        <strong>Nour Hassan</strong>
+                                        <small>nour@example.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="application-pet-cell">
+                                    <strong>Max</strong>
+                                    <small>German Shepherd</small>
+                                </div>
+                            </td>
+                            <td>Oct 26, 2026</td>
+                            <td><span class="application-status rejected">Rejected</span></td>
+                            <td>
+                                <a href="review-application.html" class="application-review-link">
+                                    View →
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="application-id">#APP-1021</td>
+                            <td>
+                                <div class="applicant-cell">
+                                    <span class="applicant-avatar">MK</span>
+                                    <div>
+                                        <strong>Mariam Khaled</strong>
+                                        <small>mariam@example.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="application-pet-cell">
+                                    <strong>Coco</strong>
+                                    <small>Mixed Breed</small>
+                                </div>
+                            </td>
+                            <td>Oct 25, 2026</td>
+                            <td><span class="application-status pending">Pending</span></td>
+                            <td>
+                                <a href="review-application.html" class="application-review-link">
+                                    Review →
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="application-id">#APP-1020</td>
+                            <td>
+                                <div class="applicant-cell">
+                                    <span class="applicant-avatar">YO</span>
+                                    <div>
+                                        <strong>Youssef Omar</strong>
+                                        <small>youssef@example.com</small>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="application-pet-cell">
+                                    <strong>Bella</strong>
+                                    <small>Labrador</small>
+                                </div>
+                            </td>
+                            <td>Oct 24, 2026</td>
+                            <td><span class="application-status approved">Approved</span></td>
+                            <td>
+                                <a href="review-application.html" class="application-review-link">
+                                    View →
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <!-- Pagination UI -->
+            <div class="applications-pagination">
+                <p>Showing <strong>1–5</strong> of <strong>24</strong> applications</p>
+
+                <div class="pagination-controls">
+                    <button type="button" disabled>Previous</button>
+                    <span class="current-page">1</span>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">Next</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="applications-footer">
+        <p>© 2026 PawHaven. Every pet deserves a loving home.</p>
+    </footer>
+
+</body>
+</html>

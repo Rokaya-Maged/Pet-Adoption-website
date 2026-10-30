@@ -246,3 +246,16 @@
 .pet-form-button.primary:hover {
     background: var(--color-heading);
 }
+
+.pet-id-note {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 13px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: #F4F6F3;
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+}

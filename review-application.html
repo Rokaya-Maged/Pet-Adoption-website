@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Application | PawHaven</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/admin-review.css">
+</head>
+
+<body class="review-application-page">
+
+    <!-- Admin Navigation -->
+    <header class="applications-header">
+        <a href="admin-dashboard.html" class="applications-brand">
+            <img src="images/icons/paw-green.svg" alt="">
+            <span>PawHaven</span>
+        </a>
+
+        <nav class="applications-nav" aria-label="Admin navigation">
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="admin-pets.html">Manage Pets</a>
+            <a href="manage-applications.html" class="active">Manage Applications</a>
+            <a href="login.html" class="applications-logout">Logout</a>
+        </nav>
+    </header>
+
+    <main class="review-main">
+
+        <!-- Page Heading -->
+        <section class="review-heading">
+            <div>
+                <a href="manage-applications.html" class="review-back-link">
+                    ← Back to Applications
+                </a>
+
+                <span class="review-eyebrow">APPLICATION REVIEW</span>
+                <h1>Review Application</h1>
+                <p>Review the applicant's information before making your decision.</p>
+            </div>
+
+            <div class="review-reference">
+                <span>Application ID</span>
+                <strong>#APP-1024</strong>
+                <span class="application-status pending">Pending</span>
+            </div>
+        </section>
+
+        <div class="review-layout">
+
+            <!-- Left Column: Application Details -->
+            <div class="review-details">
+
+                <!-- Applicant Information -->
+                <section class="review-card">
+                    <div class="review-card-heading">
+                        <div>
+                            <span class="review-section-number">01</span>
+                            <h2>Applicant Information</h2>
+                        </div>
+                    </div>
+
+                    <div class="applicant-profile">
+                        <div class="review-avatar">SM</div>
+                        <div>
+                            <h3>Sarah Mohamed</h3>
+                            <p>Adoption applicant</p>
+                        </div>
+                    </div>
+
+                    <div class="review-info-grid">
+                        <div class="review-info-item">
+                            <span>Email Address</span>
+                            <strong>sarah@example.com</strong>
+                        </div>
+
+                        <div class="review-info-item">
+                            <span>Phone Number</span>
+                            <strong>01012345678</strong>
+                        </div>
+
+                        <div class="review-info-item">
+                            <span>Application Date</span>
+                            <strong>October 28, 2026</strong>
+                        </div>
+
+                        <div class="review-info-item">
+                            <span>Application Status</span>
+                            <strong class="review-pending-text">Pending Review</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pet Information -->
+                <section class="review-card">
+                    <div class="review-card-heading">
+                        <div>
+                            <span class="review-section-number">02</span>
+                            <h2>Pet Information</h2>
+                        </div>
+                    </div>
+
+                    <div class="review-pet">
+                        <div class="review-pet-image">
+                            <img src="images/pets/buddy.jpg" alt="Buddy, a Golden Retriever">
+                        </div>
+
+                        <div class="review-pet-details">
+                            <span class="review-pet-label">PET APPLIED FOR</span>
+                            <h3>Buddy</h3>
+                            <p>Golden Retriever</p>
+                            <div class="review-pet-meta">
+                                <span>3 years old</span>
+                                <span>Male</span>
+                                <span>Available</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="pet-details.html" class="review-pet-link">
+                        View Pet Details →
+                    </a>
+                </section>
+
+                <!-- Adoption Questions -->
+                <section class="review-card">
+                    <div class="review-card-heading">
+                        <div>
+                            <span class="review-section-number">03</span>
+                            <h2>Adoption Information</h2>
+                        </div>
+                    </div>
+
+                    <div class="review-answer">
+                        <h3>Why would you like to adopt Buddy?</h3>
+                        <p>
+                            I have always loved dogs and would like to give Buddy
+                            a safe and caring home. I believe he would be a
+                            wonderful addition to my family.
+                        </p>
+                    </div>
+
+                    <div class="review-answer">
+                        <h3>Do you have previous experience with pets?</h3>
+                        <p>
+                            Yes. I previously owned a dog and have experience
+                            taking care of pets.
+                        </p>
+                    </div>
+
+                    <div class="review-answer">
+                        <h3>What type of home do you live in?</h3>
+                        <p>Apartment with access to an outdoor walking area.</p>
+                    </div>
+
+                    <div class="review-answer">
+                        <h3>How much time can you dedicate to your pet?</h3>
+                        <p>
+                            I can spend several hours each day caring for,
+                            walking, and playing with Buddy.
+                        </p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Decision Panel -->
+            <aside class="review-decision-panel">
+
+                <div class="decision-heading">
+                    <span class="review-eyebrow">FINAL STEP</span>
+                    <h2>Application Decision</h2>
+                    <p>
+                        Choose whether to approve or reject this application.
+                        Include a message explaining your decision.
+                    </p>
+                </div>
+
+                <form class="decision-form" action="#" method="post">
+
+                    <fieldset class="decision-options">
+                        <legend>Your Decision</legend>
+
+                        <label class="decision-option decision-approve">
+                            <input
+                                type="radio"
+                                name="decision"
+                                value="approved"
+                                required>
+
+                            <span class="decision-option-content">
+                                <span class="decision-option-icon">✓</span>
+                                <span>
+                                    <strong>Approve Application</strong>
+                                    <small>Accept this adoption request.</small>
+                                </span>
+                            </span>
+                        </label>
+
+                        <label class="decision-option decision-reject">
+                            <input
+                                type="radio"
+                                name="decision"
+                                value="rejected"
+                                required>
+
+                            <span class="decision-option-content">
+                                <span class="decision-option-icon">×</span>
+                                <span>
+                                    <strong>Reject Application</strong>
+                                    <small>Decline this adoption request.</small>
+                                </span>
+                            </span>
+                        </label>
+                    </fieldset>
+
+                    <div class="decision-message-field">
+                        <label for="decision-message">
+                            Message to Applicant
+                        </label>
+
+                        <textarea
+                            id="decision-message"
+                            name="decision_message"
+                            rows="6"
+                            minlength="10"
+                            maxlength="1000"
+                            placeholder="Write a message explaining your decision..."
+                            required></textarea>
+
+                        <small>
+                            This message will be shared with the applicant.
+                            Minimum 10 characters.
+                        </small>
+                    </div>
+
+                    <button
+                        type="submit"
+                        name="submit_decision"
+                        value="submit"
+                        class="decision-submit">
+                        Submit Decision →
+                    </button>
+
+                    <a href="manage-applications.html" class="decision-cancel">
+                        Cancel and Go Back
+                    </a>
+
+                </form>
+
+                <div class="decision-note">
+                    <span aria-hidden="true">ⓘ</span>
+                    <p>
+                        Please review all application details carefully.
+                        Your decision and message will be visible to the applicant.
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="applications-footer">
+        <p>© 2026 PawHaven. Every pet deserves a loving home.</p>
+    </footer>
+
+</body>
+</html>
