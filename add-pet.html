@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,16 +42,14 @@
                 <p>Create a complete profile to help the right family connect.</p>
             </header>
 
-            <form class="pet-form-card" action="#" method="post"
-                  enctype="multipart/form-data">
+            <form class="pet-form-card" action="#" method="post" enctype="multipart/form-data">
 
                 <section class="pet-form-section">
                     <h2>Pet photos</h2>
                     <p>Add clear photos to help potential adopters get to know this pet.</p>
 
-                    <input class="pet-file-input" type="file"
-                           id="pet-photos" name="petPhotos"
-                           accept="image/png,image/jpeg" multiple>
+                    <input class="pet-file-input" type="file" id="pet-photos" name="petPhotos"
+                        accept="image/png,image/jpeg" multiple>
 
                     <label class="pet-photo-upload" for="pet-photos">
                         <span class="pet-upload-symbol">+</span>
@@ -67,14 +66,12 @@
 
                         <label class="pet-field">
                             <span>Pet name <b>*</b></span>
-                            <input type="text" name="petName"
-                                   placeholder="e.g. Luna" required>
+                            <input type="text" name="petName" placeholder="e.g. Luna" required>
                         </label>
 
                         <label class="pet-field">
                             <span>Pet ID</span>
-                            <input type="text" name="petId"
-                                   value="Auto-generated when saved" readonly>
+                            <input type="text" name="petId" value="Auto-generated when saved" readonly>
                         </label>
 
                         <label class="pet-field">
@@ -90,14 +87,12 @@
 
                         <label class="pet-field">
                             <span>Breed <b>*</b></span>
-                            <input type="text" name="breed"
-                                   placeholder="e.g. Shepherd mix" required>
+                            <input type="text" name="breed" placeholder="e.g. Shepherd mix" required>
                         </label>
 
                         <label class="pet-field">
                             <span>Age <b>*</b></span>
-                            <input type="number" name="age" min="0" max="100"
-                                   placeholder="Age in years" required>
+                            <input type="number" name="age" min="0" max="100" placeholder="Age in years" required>
                         </label>
 
                         <label class="pet-field">
@@ -125,8 +120,7 @@
                 </section>
 
                 <div class="pet-form-actions">
-                    <a class="pet-form-button secondary"
-                       href="manage-pets.html">Cancel</a>
+                    <a class="pet-form-button secondary" href="manage-pets.html">Cancel</a>
 
                     <button class="pet-form-button primary" type="submit">
                         Publish pet profile <span aria-hidden="true">→</span>
@@ -137,4 +131,5 @@
         </div>
     </main>
 </body>
+
 </html>

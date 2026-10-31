@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +15,6 @@
 </head>
 
 <body class="admin-signup-page">
-
-    <!-- Guest Navigation -->
-    <header class="signup-header">
-        <a href="index.html" class="signup-brand">
-            <img src="images/icons/paw-green.svg" alt="">
-            <span>PawHaven</span>
-        </a>
-
-        <nav class="signup-nav" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="pets.html">Browse Pets</a>
-            <a href="login.html">Login</a>
-            <a href="signup-user.html" class="signup-nav-button">
-                Sign Up
-            </a>
-        </nav>
-    </header>
-
 
     <!-- Registration Section -->
     <main class="admin-signup-main">
@@ -81,70 +63,41 @@
             </div>
 
 
-            <form class="admin-signup-form"
-                  action="#"
-                  method="post">
+            <form class="admin-signup-form" action="admin-dashboard.html" method="post">
 
                 <!-- Username -->
                 <div class="signup-field">
-                    <label for="username">Username</label>
+                    <label for="username">Username <span class="required">*</span></label>
 
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        placeholder="Choose a username"
-                        minlength="3"
-                        maxlength="30"
-                        autocomplete="username"
-                        required
-                    >
+                    <input type="text" id="username" name="username" placeholder="Choose a username" minlength="3"
+                        maxlength="30" autocomplete="username" required>
                 </div>
 
 
                 <!-- Email -->
                 <div class="signup-field">
-                    <label for="email">Email address</label>
+                    <label for="email">Email address <span class="required">*</span></label>
 
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="example@email.com"
-                        autocomplete="email"
-                        required
-                    >
+                    <input type="email" id="email" name="email" placeholder="example@email.com" autocomplete="email"
+                        required>
                 </div>
 
 
                 <!-- Shelter Name -->
                 <div class="signup-field">
-                    <label for="shelter-name">Shelter name</label>
+                    <label for="shelter-name">Shelter <span class="required">*</span></label>
 
-                    <input
-                        type="text"
-                        id="shelter-name"
-                        name="shelter_name"
-                        placeholder="Enter your shelter name"
-                        maxlength="100"
-                        required
-                    >
+                    <input type="text" id="shelter-name" name="shelter_name" placeholder="Enter your shelter name"
+                        maxlength="100" required>
                 </div>
 
 
                 <!-- Password -->
                 <div class="signup-field">
-                    <label for="password">Password</label>
+                    <label for="password">Password <span class="required">*</span></label>
 
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Create a password"
-                        minlength="8"
-                        autocomplete="new-password"
-                        required
-                    >
+                    <input type="password" id="password" name="password" placeholder="Create a password" minlength="8"
+                        autocomplete="new-password" required>
 
                     <small>
                         Password must contain at least 8 characters.
@@ -154,31 +107,17 @@
 
                 <!-- Confirm Password -->
                 <div class="signup-field">
-                    <label for="confirm-password">
-                        Confirm password
-                    </label>
+                    <label for="confirm-password">Confirm password <span class="required">*</span></label>
 
-                    <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirm_password"
-                        placeholder="Re-enter your password"
-                        minlength="8"
-                        autocomplete="new-password"
-                        required
-                    >
+                    <input type="password" id="confirm-password" name="confirm_password"
+                        placeholder="Re-enter your password" minlength="8" autocomplete="new-password" required>
                 </div>
 
 
                 <!-- Admin Role -->
                 <div class="signup-role">
                     <label class="role-checkbox">
-                        <input
-                            type="checkbox"
-                            name="is_shelteradmin"
-                            value="true"
-                            required
-                        >
+                        <input type="checkbox" name="is_shelteradmin" value="true" required>
 
                         <span>
                             I am registering as a shelter administrator.
@@ -212,4 +151,5 @@
     </footer>
 
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 /* 1. Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
 
@@ -25,6 +24,8 @@
     --font-semibold: 600;
     --font-bold: 700;
     --font-extrabold: 800;
+
+    --site-max: 1690px;
 }
 
 /* 3. Universal Reset */
@@ -44,7 +45,10 @@ body {
 }
 
 /* 5. Heading Styles */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: var(--font-regular);
     color: var(--color-heading);
 }
@@ -66,4 +70,92 @@ button {
     font-size: inherit;
     cursor: pointer;
     border: none;
+
+}
+
+/* 8. Shared Navigation Bar */
+.site-header {
+    width: 100%;
+    border-bottom: 1px solid #e5e8e1;
+    background: var(--color-background);
+    position: relative;
+    z-index: 20;
+}
+
+.site-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 105px;
+    gap: 32px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 27px;
+    line-height: 1;
+    font-weight: 800;
+    color: var(--color-heading);
+    white-space: nowrap;
+}
+
+.brand:hover {
+    color: var(--color-heading);
+}
+
+.brand-mark {
+    height: 49px;
+    width: 49px;
+    background: var(--color-forest);
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+}
+
+.brand-mark img {
+    width: 26px;
+    height: 26px;
+    filter: brightness(0) invert(1);
+}
+
+.guest-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 2.7vw, 52px);
+}
+
+.guest-nav a {
+    color: var(--color-primary);
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.guest-nav a:hover,
+.guest-nav a[aria-current="page"]:hover {
+    color: var(--color-terracotta);
+}
+
+.guest-nav .signup-link {
+    border: 1px solid var(--color-forest);
+    border-radius: 16px;
+    padding: 15px 22px;
+    color: var(--color-forest);
+}
+
+.guest-nav .signup-link:hover {
+    background: var(--color-forest);
+    color: white;
+}
+
+
+/* Shared page container */
+.site-container {
+    width: calc(100% - 10%);
+    max-width: var(--site-max);
+    margin: 0 auto;
 }

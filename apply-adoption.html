@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,204 +14,166 @@
 
 <body class="adoption-page">
 
-<!-- Top navigation bar -->
-<header class="site-header">
-    <nav class="site-nav" aria-label="Main navigation">
+    <!-- Top navigation bar -->
+    <header class="site-header">
+        <div class="site-container site-header-inner">
 
-        <a href="index.html" class="brand adoption-brand">
-                <span class="brand-icon" aria-hidden="true">
-                    <img
-                            src="images/icons/paw.svg"
-                            alt=""
-                            class="paw-icon"
-                    >
+            <a class="brand" href="index.html" aria-label="PawHaven home">
+                <span class="brand-mark">
+                    <img src="images/icons/paw.svg" alt="">
                 </span>
-            <span>PawHaven</span>
-        </a>
+                <span>PawHaven</span>
+            </a>
 
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="pets.html">Find Pets</a>
-            <a href="my-application.html">My Applications</a>
-            <a href="login.html" class="logout-link">Logout</a>
+            <nav class="guest-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="pets.html">Browse Pets</a>
+                <a href="my-applications.html">My Applications</a>
+                <a class="signup-link" href="index.html">Logout</a>
+            </nav>
+
         </div>
+    </header>
 
-    </nav>
-</header>
+    <main class="adoption-main">
 
-<main class="adoption-main">
+        <!-- Page heading -->
+        <section class="adoption-heading">
 
-    <!-- Page heading -->
-    <section class="adoption-heading">
+            <p class="application-label">
+                APPLICATION FOR LUNA · PH-1042
+            </p>
 
-        <p class="application-label">
-            APPLICATION FOR LUNA · PH-1042
-        </p>
+            <h1>Adoption Application</h1>
 
-        <h1>Adoption Application</h1>
+            <p class="heading-description">
+                Tell us about you.<br>
+                Your answers help us make a thoughtful, lasting match.
+            </p>
 
-        <p class="heading-description">
-            Tell us about you.<br>
-            Your answers help us make a thoughtful, lasting match.
-        </p>
-
-    </section>
-
-    <!-- Application form -->
-    <form class="application-form adoption-form"
-          action="#"
-          method="post">
-
-        <!-- Applicant information -->
-        <section class="form-section">
-
-            <h2>Applicant information</h2>
-
-            <div class="form-grid">
-
-                <div class="form-group">
-                    <label for="applicant-name">
-                        Full name <span>*</span>
-                    </label>
-
-                    <input
-                            type="text"
-                            id="applicant-name"
-                            name="full_name"
-                            autocomplete="name"
-                            required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="applicant-email">
-                        Email address <span>*</span>
-                    </label>
-
-                    <input
-                            type="email"
-                            id="applicant-email"
-                            name="email"
-                            autocomplete="email"
-                            required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="applicant-phone">
-                        Phone number <span>*</span>
-                    </label>
-
-                    <input
-                            type="tel"
-                            id="applicant-phone"
-                            name="phone"
-                            autocomplete="tel"
-                            required
-                    >
-                </div>
-
-                <div class="form-group">
-                    <label for="home-address">
-                        Home address <span>*</span>
-                    </label>
-
-                    <input
-                            type="text"
-                            id="home-address"
-                            name="home_address"
-                            autocomplete="street-address"
-                            required
-                    >
-                </div>
-
-            </div>
         </section>
 
-        <!-- Home and lifestyle -->
-        <section class="form-section">
+        <!-- Application form -->
+        <form class="application-form adoption-form" action="my-applications.html" method="get">
 
-            <h2>Your home &amp; lifestyle</h2>
+            <!-- Applicant information -->
+            <section class="form-section">
 
-            <div class="form-grid">
+                <h2>Applicant information</h2>
 
-                <div class="form-group">
-                    <label for="home-type">
-                        Home type
-                    </label>
+                <div class="form-grid">
 
-                    <select id="home-type" name="home_type" required>
-                        <option value="" selected disabled>
-                            Select home type
-                        </option>
-                        <option value="apartment">Apartment</option>
-                        <option value="house">House</option>
-                        <option value="villa">Villa</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="applicant-name">
+                            Full name <span>*</span>
+                        </label>
+
+                        <input type="text" id="applicant-name" name="full_name" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applicant-email">
+                            Email address <span>*</span>
+                        </label>
+
+                        <input type="email" id="applicant-email" name="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="applicant-phone">
+                            Phone number <span>*</span>
+                        </label>
+
+                        <input type="tel" id="applicant-phone" name="phone" autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="home-address">
+                            Home address <span>*</span>
+                        </label>
+
+                        <input type="text" id="home-address" name="home_address" autocomplete="street-address" required>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Home and lifestyle -->
+            <section class="form-section">
+
+                <h2>Your home &amp; lifestyle</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="home-type">
+                            Home type
+                        </label>
+
+                        <select id="home-type" name="home_type" required>
+                            <option value="" selected disabled>
+                                Select home type
+                            </option>
+                            <option value="apartment">Apartment</option>
+                            <option value="house">House</option>
+                            <option value="villa">Villa</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ownership">
+                            Do you rent or own?
+                        </label>
+
+                        <select id="ownership" name="ownership" required>
+                            <option value="" selected disabled>
+                                Select do you rent or own?
+                            </option>
+                            <option value="own">Own</option>
+                            <option value="rent">Rent</option>
+                            <option value="family">Live with family</option>
+                        </select>
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="ownership">
-                        Do you rent or own?
+                <!-- Reason for adoption -->
+                <div class="form-group reason-group">
+                    <label for="adoption-reason">
+                        Why would Luna be a good fit for your home?
+                        <span>*</span>
                     </label>
 
-                    <select id="ownership" name="ownership" required>
-                        <option value="" selected disabled>
-                            Select do you rent or own?
-                        </option>
-                        <option value="own">Own</option>
-                        <option value="rent">Rent</option>
-                        <option value="family">Live with family</option>
-                    </select>
-                </div>
-
-            </div>
-
-            <!-- Reason for adoption -->
-            <div class="form-group reason-group">
-                <label for="adoption-reason">
-                    Why would Luna be a good fit for your home?
-                    <span>*</span>
-                </label>
-
-                <textarea
-                        id="adoption-reason"
-                        name="adoption_reason"
-                        rows="4"
+                    <textarea id="adoption-reason" name="adoption_reason" rows="4"
                         placeholder="Share your daily routine, household, and what you're looking for in a companion."
-                        required
-                ></textarea>
+                        required></textarea>
+                </div>
+
+                <!-- Confirmation checkbox -->
+                <div class="confirmation-group">
+
+                    <input type="checkbox" id="confirm-information" name="confirm_information" required>
+
+                    <label for="confirm-information">
+                        I confirm that the information provided is accurate.
+                    </label>
+
+                </div>
+
+            </section>
+
+            <!-- Form actions -->
+            <div class="form-actions">
+                <button type="submit" class="submit-button">
+                    Submit Application
+                </button>
             </div>
 
-            <!-- Confirmation checkbox -->
-            <div class="confirmation-group">
+        </form>
 
-                <input
-                        type="checkbox"
-                        id="confirm-information"
-                        name="confirm_information"
-                        required
-                >
-
-                <label for="confirm-information">
-                    I confirm that the information provided is accurate.
-                </label>
-
-            </div>
-
-        </section>
-
-        <!-- Form actions -->
-        <div class="form-actions">
-            <button type="submit" class="submit-button">
-                Submit Application
-            </button>
-        </div>
-
-    </form>
-
-</main>
+    </main>
 
 </body>
+
 </html>

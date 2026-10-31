@@ -20,8 +20,9 @@ styles for:
 
 .signup-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     min-height: 100vh;
+    width: 100%;
 }
 
 
@@ -35,11 +36,9 @@ styles for:
     color: #FFFFFF;
 
     background:
-            linear-gradient(
-                    rgba(31, 68, 53, 0.70),
-                    rgba(31, 68, 53, 0.84)
-            ),
-            url("../images/pets/signup-pets.jpeg") center / cover no-repeat;
+        linear-gradient(rgba(31, 68, 53, 0.70),
+            rgba(31, 68, 53, 0.84)),
+        url("../images/pets/signup-pets.jpeg") center / cover no-repeat;
 }
 
 .visual-content {
@@ -113,7 +112,7 @@ styles for:
 
 /* PawHaven brand */
 
-.brand {
+.signup-page .brand {
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -203,8 +202,8 @@ styles for:
     font-size: 15px;
 
     transition:
-            border-color 0.2s ease,
-            box-shadow 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 
@@ -253,8 +252,8 @@ styles for:
     box-shadow: 0 5px 12px rgba(34, 67, 52, 0.15);
 
     transition:
-            background 0.2s ease,
-            transform 0.2s ease;
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
 .submit-btn:hover {
@@ -300,79 +299,6 @@ styles for:
     min-height: 100vh;
     background: var(--color-background);
     color: var(--color-primary);
-}
-
-
-/* Top navigation */
-
-.site-header {
-    width: 100%;
-
-    border-bottom: 1px solid var(--color-border);
-    background: var(--color-background);
-}
-
-.site-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-
-    max-width: 1240px;
-    min-height: 72px;
-    margin: 0 auto;
-    padding: 12px 28px;
-}
-
-
-/* Adoption page logo */
-
-.adoption-brand {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-
-    color: var(--color-forest);
-    font-size: 20px;
-    font-weight: var(--font-extrabold);
-    white-space: nowrap;
-}
-
-.adoption-brand .brand-icon {
-    width: 38px;
-    height: 38px;
-    margin: 0;
-
-    border-radius: 11px;
-}
-
-
-/* Navigation links */
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 26px;
-}
-
-.nav-links a {
-    color: var(--color-primary);
-    font-size: 14px;
-    font-weight: var(--font-semibold);
-    white-space: nowrap;
-}
-
-.nav-links a:hover {
-    color: var(--color-terracotta);
-}
-
-.nav-links .logout-link {
-    padding: 9px 15px;
-
-    border: 1px solid var(--color-forest);
-    border-radius: 9px;
-
-    color: var(--color-forest);
 }
 
 
@@ -442,7 +368,7 @@ styles for:
 
 /* Form sections */
 
-.form-section + .form-section {
+.form-section+.form-section {
     margin-top: 28px;
     padding-top: 25px;
 

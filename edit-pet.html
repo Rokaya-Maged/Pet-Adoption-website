@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,8 +43,7 @@
                 <p>Update the pet's information, photos, and adoption availability.</p>
             </header>
 
-            <form class="pet-form-card" action="#" method="post"
-                  enctype="multipart/form-data">
+            <form class="pet-form-card" action="#" method="post" enctype="multipart/form-data">
 
                 <!-- Pet Photos -->
                 <section class="pet-form-section">
@@ -54,13 +53,8 @@
                         on this pet's listing.
                     </p>
 
-                    <input
-                        class="pet-file-input"
-                        type="file"
-                        id="pet-photos"
-                        name="pet_photos"
-                        accept="image/png,image/jpeg"
-                        multiple>
+                    <input class="pet-file-input" type="file" id="pet-photos" name="pet_photos"
+                        accept="image/png,image/jpeg" multiple>
 
                     <label class="pet-photo-upload" for="pet-photos">
                         <span class="pet-upload-symbol" aria-hidden="true">+</span>
@@ -78,11 +72,7 @@
 
                         <label class="pet-field">
                             <span>Pet Name <b>*</b></span>
-                            <input
-                                type="text"
-                                name="pet_name"
-                                placeholder="Enter the pet's name"
-                                maxlength="50"
+                            <input type="text" name="pet_name" placeholder="Enter the pet's name" maxlength="50"
                                 required>
                         </label>
 
@@ -108,24 +98,13 @@
 
                         <label class="pet-field">
                             <span>Breed <b>*</b></span>
-                            <input
-                                type="text"
-                                name="breed"
-                                placeholder="Enter the pet's breed"
-                                maxlength="60"
-                                required>
+                            <input type="text" name="breed" placeholder="Enter the pet's breed" maxlength="60" required>
                         </label>
 
                         <label class="pet-field">
                             <span>Age (years) <b>*</b></span>
-                            <input
-                                type="number"
-                                name="age"
-                                min="0"
-                                max="100"
-                                step="0.1"
-                                placeholder="Enter age in years"
-                                required>
+                            <input type="number" name="age" min="0" max="100" step="0.1"
+                                placeholder="Enter age in years" required>
                         </label>
 
                         <label class="pet-field">
@@ -152,21 +131,14 @@
 
                     <label class="pet-field">
                         <span>Description <b>*</b></span>
-                        <textarea
-                            name="description"
-                            rows="6"
-                            minlength="20"
-                            maxlength="1000"
-                            placeholder="Write a description about this pet..."
-                            required></textarea>
+                        <textarea name="description" rows="6" minlength="20" maxlength="1000"
+                            placeholder="Write a description about this pet..." required></textarea>
                     </label>
                 </section>
 
                 <!-- Form Actions -->
                 <div class="pet-form-actions">
-                    <a
-                        class="pet-form-button secondary"
-                        href="admin-pets.html">
+                    <a class="pet-form-button secondary" href="admin-pets.html">
                         Cancel
                     </a>
 
@@ -184,4 +156,5 @@
     </footer>
 
 </body>
+
 </html>

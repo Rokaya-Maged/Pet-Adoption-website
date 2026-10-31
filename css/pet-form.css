@@ -63,7 +63,7 @@
     box-shadow: 0 6px 24px rgba(35, 70, 57, 0.05);
 }
 
-.pet-form-section + .pet-form-section {
+.pet-form-section+.pet-form-section {
     margin-top: 30px;
     padding-top: 28px;
     border-top: 1px solid var(--color-border);
@@ -76,7 +76,7 @@
     font-weight: var(--font-bold);
 }
 
-.pet-form-section > p {
+.pet-form-section>p {
     margin-bottom: 20px;
     color: var(--color-secondary);
     font-size: 14px;
@@ -137,7 +137,7 @@
     white-space: nowrap;
 }
 
-.pet-file-input:focus-visible + .pet-photo-upload {
+.pet-file-input:focus-visible+.pet-photo-upload {
     outline: 3px solid rgba(49, 92, 75, .25);
     outline-offset: 3px;
 }
