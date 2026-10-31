@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shelter Registration | PawHaven</title>
+
+    <!-- Shared styles -->
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Admin registration and review styles -->
+    <link rel="stylesheet" href="css/admin-review.css">
+</head>
+
+<body class="admin-signup-page">
+
+    <!-- Guest Navigation -->
+    <header class="signup-header">
+        <a href="index.html" class="signup-brand">
+            <img src="images/icons/paw-green.svg" alt="">
+            <span>PawHaven</span>
+        </a>
+
+        <nav class="signup-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="pets.html">Browse Pets</a>
+            <a href="login.html">Login</a>
+            <a href="signup-user.html" class="signup-nav-button">
+                Sign Up
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- Registration Section -->
+    <main class="admin-signup-main">
+
+        <!-- Welcome Panel -->
+        <aside class="signup-welcome">
+
+            <span class="signup-eyebrow">
+                JOIN OUR COMMUNITY
+            </span>
+
+            <h1>Give every pet a chance to find a home.</h1>
+
+            <p>
+                Create your shelter account and become part of a
+                community dedicated to helping pets find loving
+                forever homes.
+            </p>
+
+            <div class="welcome-decoration" aria-hidden="true">
+                <img src="images/icons/paw-green.svg" alt="">
+            </div>
+
+            <div class="welcome-note">
+                <span class="welcome-note-icon">♥</span>
+                <p>
+                    Every adoption starts with a caring shelter.
+                </p>
+            </div>
+
+        </aside>
+
+
+        <!-- Registration Form -->
+        <section class="admin-signup-content">
+
+            <div class="signup-form-heading">
+                <span class="signup-eyebrow">SHELTER ACCOUNT</span>
+
+                <h2>Create your account</h2>
+
+                <p>
+                    Enter your details to register your shelter
+                    with PawHaven.
+                </p>
+            </div>
+
+
+            <form class="admin-signup-form"
+                  action="#"
+                  method="post">
+
+                <!-- Username -->
+                <div class="signup-field">
+                    <label for="username">Username</label>
+
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Choose a username"
+                        minlength="3"
+                        maxlength="30"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+
+                <!-- Email -->
+                <div class="signup-field">
+                    <label for="email">Email address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+
+                <!-- Shelter Name -->
+                <div class="signup-field">
+                    <label for="shelter-name">Shelter name</label>
+
+                    <input
+                        type="text"
+                        id="shelter-name"
+                        name="shelter_name"
+                        placeholder="Enter your shelter name"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+
+                <!-- Password -->
+                <div class="signup-field">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Create a password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <small>
+                        Password must contain at least 8 characters.
+                    </small>
+                </div>
+
+
+                <!-- Confirm Password -->
+                <div class="signup-field">
+                    <label for="confirm-password">
+                        Confirm password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirm-password"
+                        name="confirm_password"
+                        placeholder="Re-enter your password"
+                        minlength="8"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+
+                <!-- Admin Role -->
+                <div class="signup-role">
+                    <label class="role-checkbox">
+                        <input
+                            type="checkbox"
+                            name="is_shelteradmin"
+                            value="true"
+                            required
+                        >
+
+                        <span>
+                            I am registering as a shelter administrator.
+                        </span>
+                    </label>
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" class="signup-submit">
+                    Create Shelter Account
+                    <span aria-hidden="true">→</span>
+                </button>
+
+
+                <p class="signup-login-link">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="signup-footer">
+        <p>© 2026 PawHaven. Every pet deserves a loving home.</p>
+    </footer>
+
+</body>
+</html>

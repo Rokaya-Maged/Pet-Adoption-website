@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new pet | PawHaven</title>
+    <link rel="icon" type="image/svg+xml" href="images/icons/paw.svg">
+
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/guest.css">
+    <link rel="stylesheet" href="css/pet-form.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="site-container site-header-inner">
+            <a class="brand" href="index.html" aria-label="PawHaven home">
+                <span class="brand-mark"><img src="images/icons/paw.svg" alt=""></span>
+                <span>PawHaven</span>
+            </a>
+            <nav class="guest-nav" aria-label="Guest navigation">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pets.html" aria-current="page">Manage Pets</a>
+                <a href="manage-applications.html">Manage Applications</a>
+                <a class="signup-link" href="login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main class="pet-form-page">
+        <div class="pet-form-main">
+
+            <a class="pet-form-back" href="admin-dashboard.html">
+                ← Back to manage pets
+            </a>
+
+            <header class="pet-form-title">
+                <span class="pet-form-eyebrow">Pet profile</span>
+                <h1>Add a new pet</h1>
+                <p>Create a complete profile to help the right family connect.</p>
+            </header>
+
+            <form class="pet-form-card" action="#" method="post"
+                  enctype="multipart/form-data">
+
+                <section class="pet-form-section">
+                    <h2>Pet photos</h2>
+                    <p>Add clear photos to help potential adopters get to know this pet.</p>
+
+                    <input class="pet-file-input" type="file"
+                           id="pet-photos" name="petPhotos"
+                           accept="image/png,image/jpeg" multiple>
+
+                    <label class="pet-photo-upload" for="pet-photos">
+                        <span class="pet-upload-symbol">+</span>
+                        <strong>Add pet photos</strong>
+                        <span>Choose JPG or PNG files · Up to 10 MB each</span>
+                    </label>
+                </section>
+
+                <section class="pet-form-section">
+                    <h2>Basic information</h2>
+                    <p>Keep the pet’s details accurate and up to date.</p>
+
+                    <div class="pet-form-grid">
+
+                        <label class="pet-field">
+                            <span>Pet name <b>*</b></span>
+                            <input type="text" name="petName"
+                                   placeholder="e.g. Luna" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Pet ID</span>
+                            <input type="text" name="petId"
+                                   value="Auto-generated when saved" readonly>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Species <b>*</b></span>
+                            <select name="species" required>
+                                <option value="" disabled selected>Select species</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="rabbit">Rabbit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Breed <b>*</b></span>
+                            <input type="text" name="breed"
+                                   placeholder="e.g. Shepherd mix" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Age <b>*</b></span>
+                            <input type="number" name="age" min="0" max="100"
+                                   placeholder="Age in years" required>
+                        </label>
+
+                        <label class="pet-field">
+                            <span>Status <b>*</b></span>
+                            <select name="status" required>
+                                <option value="" disabled selected>Select status</option>
+                                <option value="available">Available</option>
+                                <option value="pending">Pending</option>
+                                <option value="adopted">Adopted</option>
+                            </select>
+                        </label>
+
+                    </div>
+                </section>
+
+                <section class="pet-form-section">
+                    <h2>About this pet</h2>
+                    <p>Share their personality, favorite activities, and ideal home.</p>
+
+                    <label class="pet-field">
+                        <span>Description <b>*</b></span>
+                        <textarea name="description" rows="6" required
+                            placeholder="Describe their personality, favorite things, and ideal home."></textarea>
+                    </label>
+                </section>
+
+                <div class="pet-form-actions">
+                    <a class="pet-form-button secondary"
+                       href="manage-pets.html">Cancel</a>
+
+                    <button class="pet-form-button primary" type="submit">
+                        Publish pet profile <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>
