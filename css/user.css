@@ -1,0 +1,682 @@
+/*
+styles for:
+   1. User signup page
+   2. Adoption application page
+*/
+
+
+/* signup page */
+
+/* General signup page */
+
+.signup-page {
+    min-height: 100vh;
+    background: var(--color-background);
+    color: var(--color-primary);
+}
+
+
+/* Main two-column layout */
+
+.signup-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+
+/* Left side: pet photo and quote */
+
+.signup-visual {
+    display: flex;
+    align-items: flex-end;
+    min-height: 100vh;
+    padding: 9%;
+    color: #FFFFFF;
+
+    background:
+            linear-gradient(
+                    rgba(31, 68, 53, 0.70),
+                    rgba(31, 68, 53, 0.84)
+            ),
+            url("../images/pets/signup-pets.jpeg") center / cover no-repeat;
+}
+
+.visual-content {
+    width: 100%;
+}
+
+
+/* Paw icon */
+
+.paw-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+    margin-bottom: 30px;
+
+    border-radius: 17px;
+    background: #DCE9D8;
+}
+
+.paw-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    color: var(--color-forest);
+}
+
+.paw-mark .paw-icon {
+    width: 38px;
+    height: 38px;
+}
+
+
+/* Quote */
+
+.signup-visual blockquote {
+    max-width: 580px;
+
+    font-size: clamp(30px, 3vw, 43px);
+    font-weight: var(--font-bold);
+    line-height: 1.35;
+}
+
+.quote-credit {
+    margin-top: 22px;
+
+    color: #F0F3ED;
+    font-size: 15px;
+}
+
+
+/* Right side: registration panel */
+
+.signup-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 48px 8%;
+    background: var(--color-background);
+}
+
+.signup-content {
+    width: 100%;
+    max-width: 440px;
+}
+
+
+/* PawHaven brand */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 36px;
+
+    color: var(--color-forest);
+    font-size: 23px;
+    font-weight: var(--font-extrabold);
+}
+
+.brand-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+    background: #E5EEE5;
+}
+
+
+/* Signup heading */
+
+.signup-heading {
+    margin-bottom: 28px;
+}
+
+.signup-heading h1 {
+    margin-bottom: 10px;
+
+    color: var(--color-heading);
+    font-size: clamp(32px, 3vw, 40px);
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+}
+
+.signup-heading p {
+    color: var(--color-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Signup form fields */
+
+.signup-form .form-group {
+    margin-bottom: 18px;
+}
+
+.signup-form label,
+.application-form label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--color-primary);
+    font-size: 15px;
+    font-weight: var(--font-semibold);
+}
+
+.signup-form label span,
+.application-form label span {
+    color: var(--color-error);
+}
+
+
+/* Input fields */
+
+.signup-form input,
+.application-form input,
+.application-form select,
+.application-form textarea {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+
+    border: 1px solid var(--color-input-border);
+    border-radius: 10px;
+
+    background: var(--color-white);
+    color: var(--color-primary);
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+}
+
+
+/* Input focus effect */
+
+.signup-form input:focus,
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+    outline: none;
+
+    border-color: var(--color-forest);
+    box-shadow: 0 0 0 3px rgba(49, 92, 75, 0.13);
+}
+
+
+/* Password hint */
+
+.field-hint {
+    display: block;
+    margin-top: 6px;
+
+    color: var(--color-secondary);
+    font-size: 12px;
+}
+
+
+/* Create account button */
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+
+    margin-top: 24px;
+    padding: 13px 18px;
+
+    border-radius: 10px;
+    background: var(--color-forest);
+    color: var(--color-white);
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: var(--font-bold);
+
+    box-shadow: 0 5px 12px rgba(34, 67, 52, 0.15);
+
+    transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #264A3D;
+    transform: translateY(-1px);
+}
+
+.submit-btn:focus-visible,
+.submit-button:focus-visible {
+    outline: 3px solid #A9C9B4;
+    outline-offset: 3px;
+}
+
+
+/* Sign-in link */
+
+.signin-text {
+    margin-top: 22px;
+
+    color: var(--color-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.signin-text a {
+    color: var(--color-forest);
+    font-weight: var(--font-bold);
+}
+
+.signin-text a:hover {
+    color: var(--color-terracotta);
+    text-decoration: underline;
+}
+
+
+
+/* apply adoption page */
+
+/* General page */
+
+.adoption-page {
+    min-height: 100vh;
+    background: var(--color-background);
+    color: var(--color-primary);
+}
+
+
+/* Top navigation */
+
+.site-header {
+    width: 100%;
+
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-background);
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    max-width: 1240px;
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 12px 28px;
+}
+
+
+/* Adoption page logo */
+
+.adoption-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--color-forest);
+    font-size: 20px;
+    font-weight: var(--font-extrabold);
+    white-space: nowrap;
+}
+
+.adoption-brand .brand-icon {
+    width: 38px;
+    height: 38px;
+    margin: 0;
+
+    border-radius: 11px;
+}
+
+
+/* Navigation links */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav-links a {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: var(--font-semibold);
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: var(--color-terracotta);
+}
+
+.nav-links .logout-link {
+    padding: 9px 15px;
+
+    border: 1px solid var(--color-forest);
+    border-radius: 9px;
+
+    color: var(--color-forest);
+}
+
+
+/* Main content */
+
+.adoption-main {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+
+/* Page heading */
+
+.adoption-heading {
+    margin-bottom: 26px;
+}
+
+.application-label {
+    margin-bottom: 9px;
+
+    color: var(--color-terracotta);
+    font-size: 12px;
+    font-weight: var(--font-extrabold);
+    letter-spacing: 1px;
+}
+
+.adoption-heading h1 {
+    margin-bottom: 9px;
+
+    color: var(--color-heading);
+    font-size: 38px;
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+}
+
+.heading-description {
+    color: var(--color-secondary);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* Application form card */
+
+.application-form {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 0 auto;
+    padding: 32px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+
+    background: var(--color-white);
+    box-shadow: 0 8px 26px rgba(38, 59, 50, 0.05);
+}
+
+.application-form.adoption-form {
+    max-width: none;
+    margin: 0;
+}
+
+
+/* Form sections */
+
+.form-section + .form-section {
+    margin-top: 28px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+
+    color: var(--color-heading);
+    font-size: 21px;
+    font-weight: var(--font-bold);
+}
+
+
+/* Two-column form layout */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 22px;
+}
+
+.application-form .form-group {
+    min-width: 0;
+    margin-bottom: 20px;
+}
+
+.application-form.adoption-form .form-group {
+    margin-bottom: 0;
+}
+
+
+/* Reason for adoption */
+
+.application-form textarea {
+    min-height: 145px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.application-form .reason-group {
+    margin-top: 24px;
+}
+
+
+/* Placeholder text */
+
+.application-form textarea::placeholder,
+.signup-form input::placeholder,
+.application-form input::placeholder {
+    color: #929B95;
+    opacity: 1;
+}
+
+
+/* Confirmation checkbox */
+
+.confirmation-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin-top: 24px;
+}
+
+.application-form .confirmation-group input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    min-height: 17px;
+
+    flex: 0 0 17px;
+    margin: 3px 0 0;
+    padding: 0;
+
+    accent-color: var(--color-forest);
+    cursor: pointer;
+}
+
+.application-form .confirmation-group label {
+    margin: 0;
+
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: var(--font-regular);
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+/* Submit application button */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 28px;
+}
+
+.submit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 12px 22px;
+
+    border: 1px solid var(--color-forest);
+    border-radius: 10px;
+
+    background: var(--color-forest);
+    color: var(--color-white);
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: var(--font-bold);
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.submit-button:hover {
+    background: #264A3D;
+}
+
+@media (max-width: 800px) {
+
+    /* Signup page */
+
+    .signup-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .signup-visual {
+        min-height: 320px;
+        padding: 42px 8%;
+    }
+
+    .signup-visual blockquote {
+        font-size: 31px;
+    }
+
+    .signup-panel {
+        padding: 42px 24px;
+    }
+
+    .signup-content {
+        max-width: 500px;
+    }
+
+
+    /* Adoption page */
+
+    .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+
+        padding: 16px 22px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 14px 20px;
+    }
+
+    .adoption-main {
+        padding: 36px 20px 50px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    /* Signup page */
+
+    .signup-visual {
+        min-height: 260px;
+        padding: 30px 24px;
+    }
+
+    .signup-visual blockquote {
+        font-size: 26px;
+    }
+
+    .signup-panel {
+        padding: 34px 20px;
+    }
+
+    .signup-heading h1 {
+        font-size: 31px;
+    }
+
+
+    /* Adoption page */
+
+    .site-nav {
+        padding: 14px 16px;
+    }
+
+    .nav-links {
+        gap: 12px 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .adoption-main {
+        padding: 30px 16px 40px;
+    }
+
+    .adoption-heading h1 {
+        font-size: 31px;
+    }
+
+    .application-form {
+        padding: 22px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .form-actions {
+        justify-content: stretch;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+
