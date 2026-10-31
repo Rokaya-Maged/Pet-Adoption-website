@@ -3,12 +3,13 @@
 body.dashboard-page {
     background-color: var(--color-background);
     color: var(--color-primary);
-    padding: 55px 6%;
 }
 
 .dashboard {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 55px 6%;
+
 }
 
 .dashboard-header {
@@ -280,3 +281,378 @@ body.dashboard-page {
 .action-item .add-pet-link:hover {
     color: var(--color-forest);
 }
+
+
+/* =========================
+   Manage Pets Page
+========================= */
+
+body.admin-pets-page {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+}
+
+.admin-pets {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 55px 6%;
+
+}
+
+/* Page Header */
+
+.pets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.pets-eyebrow {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--color-terracotta);
+    font-size: 13px;
+    font-weight: var(--font-extrabold);
+    letter-spacing: 1px;
+}
+
+.pets-heading h1 {
+    color: var(--color-heading);
+    font-size: 38px;
+    font-weight: var(--font-bold);
+    margin-bottom: 8px;
+}
+
+.pets-heading p {
+    color: var(--color-secondary);
+    font-size: 15px;
+}
+
+/* Add Pet Button */
+
+.add-pet-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 20px;
+    background-color: var(--color-forest);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(35, 70, 57, 0.12);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.add-pet-button:hover {
+    background-color: var(--color-heading);
+    color: var(--color-white);
+}
+
+.add-pet-button img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Search and Filters */
+
+.pets-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px auto;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.pets-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 0 15px;
+    height: 48px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-input-border);
+    border-radius: 10px;
+}
+
+.pets-search img {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.pets-search input {
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 14px;
+}
+
+.pets-search input::placeholder {
+    color: var(--color-secondary);
+}
+
+.status-filter select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid var(--color-input-border);
+    border-radius: 10px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-button {
+    height: 48px;
+    padding: 0 25px;
+    border-radius: 10px;
+    background-color: var(--color-forest);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: var(--font-bold);
+    transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--color-heading);
+}
+
+/* Pet Table Container */
+
+.pets-table-card {
+    overflow: hidden;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(35, 70, 57, 0.04);
+}
+
+.pets-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pets-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Table Header */
+
+.pets-table thead {
+    background-color: #F3F5F1;
+}
+
+.pets-table th {
+    padding: 18px 22px;
+    color: var(--color-secondary);
+    font-size: 12px;
+    font-weight: var(--font-extrabold);
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+}
+
+/* Table Rows */
+
+.pets-table td {
+    padding: 18px 22px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-primary);
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.pets-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.pets-table tbody tr:hover {
+    background-color: #FCFCFA;
+}
+
+/* Pet Profile Cell */
+
+.pet-table-profile {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 150px;
+}
+
+.pet-table-profile img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.pet-table-profile span {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: var(--font-bold);
+}
+
+/* Pet Details */
+
+.pet-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pet-details span {
+    font-size: 14px;
+    font-weight: var(--font-semibold);
+}
+
+.pet-details small {
+    color: var(--color-secondary);
+    font-size: 12px;
+}
+
+/* Pet Status */
+
+.pet-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: var(--font-bold);
+    white-space: nowrap;
+}
+
+.pet-status.available {
+    background-color: #E7F0EB;
+    color: #357052;
+}
+
+.pet-status.pending {
+    background-color: #FFF0D7;
+    color: #92641B;
+}
+
+.pet-status.adopted {
+    background-color: #F1E8E4;
+    color: #94634F;
+}
+
+/* Row Actions */
+
+.pet-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.pet-actions a,
+.pet-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #E9F0E5;
+    color: var(--color-forest);
+    font-family: var(--font-primary);
+    font-size: 12px;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pet-actions a:hover,
+.pet-actions button:hover {
+    background-color: #DCE8D7;
+    color: var(--color-heading);
+}
+
+.pet-actions .delete-action {
+    background-color: #F9E1DF;
+    color: var(--color-error);
+}
+
+.pet-actions .delete-action:hover {
+    background-color: #F3D0CD;
+    color: var(--color-error);
+}
+
+/* Table Footer */
+
+.pets-table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 22px;
+    border-top: 1px solid var(--color-border);
+}
+
+.pets-table-footer p {
+    color: var(--color-secondary);
+    font-size: 13px;
+}
+
+.pets-table-footer strong {
+    color: var(--color-primary);
+    font-weight: var(--font-bold);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination button {
+    min-width: 34px;
+    height: 34px;
+    padding: 0 9px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    font-size: 12px;
+    font-weight: var(--font-semibold);
+}
+
+.pagination button:not(:disabled) {
+    cursor: pointer;
+}
+
+.pagination button:not(:disabled):hover {
+    background-color: #E9F0E5;
+    color: var(--color-forest);
+}
+
+.pagination button.current-page {
+    border-color: var(--color-forest);
+    background-color: var(--color-forest);
+    color: var(--color-white);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+

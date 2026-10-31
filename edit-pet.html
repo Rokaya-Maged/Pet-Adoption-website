@@ -5,27 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Pet Listing | PawHaven</title>
+    <link rel="icon" type="image/svg+xml" href="images/icons/paw.svg">
 
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/admin-review.css">
+    <link rel="stylesheet" href="css/guest.css">
     <link rel="stylesheet" href="css/pet-form.css">
 </head>
 
 <body class="edit-pet-page">
 
     <!-- Admin Navigation -->
-    <header class="applications-header">
-        <a href="admin-dashboard.html" class="applications-brand">
-            <img src="images/icons/paw-green.svg" alt="">
-            <span>PawHaven</span>
-        </a>
-
-        <nav class="applications-nav" aria-label="Admin navigation">
-            <a href="admin-dashboard.html">Dashboard</a>
-            <a href="admin-pets.html" class="active">Manage Pets</a>
-            <a href="manage-applications.html">Manage Applications</a>
-            <a href="login.html" class="applications-logout">Logout</a>
-        </nav>
+    <header class="site-header">
+        <div class="site-container site-header-inner">
+            <a class="brand" href="index.html" aria-label="PawHaven home">
+                <span class="brand-mark"><img src="images/icons/paw.svg" alt=""></span>
+                <span>PawHaven</span>
+            </a>
+            <nav class="guest-nav" aria-label="Guest navigation">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pets.html" aria-current="page">Manage Pets</a>
+                <a href="manage-applications.html">Manage Applications</a>
+                <a class="signup-link" href="login.html">Logout</a>
+            </nav>
+        </div>
     </header>
 
     <main class="pet-form-page">

@@ -1,1 +1,224 @@
 <!-- manage pets -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Pets | PawHaven</title>
+    <link rel="icon" type="image/svg+xml" href="images/icons/paw.svg">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/guest.css">
+    <link rel="stylesheet" href="css/admin-pets.css">
+</head>
+
+<body class="admin-pets-page">
+
+    <header class="site-header">
+        <div class="site-container site-header-inner">
+            <a class="brand" href="index.html" aria-label="PawHaven home">
+                <span class="brand-mark"><img src="images/icons/paw.svg" alt=""></span>
+                <span>PawHaven</span>
+            </a>
+            <nav class="guest-nav" aria-label="Guest navigation">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pets.html" aria-current="page">Manage Pets</a>
+                <a href="manage-applications.html">Manage Applications</a>
+                <a class="signup-link" href="login.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="admin-pets">
+
+        <!-- Page Header -->
+        <section class="pets-header">
+            <div class="pets-heading">
+                <span class="pets-eyebrow">ANIMAL CARE</span>
+                <h1>Manage pets</h1>
+                <p>Keep every profile accurate and up to date.</p>
+            </div>
+
+            <a href="add-pet.html" class="add-pet-button">
+                <img src="images/icons/plus-white.svg" alt="">
+                Add pet
+            </a>
+        </section>
+
+        <!-- Search and Filters -->
+        <section class="pets-filters">
+
+            <label class="pets-search">
+                <img src="images/icons/search.svg" alt="">
+                <input
+                    type="search"
+                    name="pet-search"
+                    placeholder="Search pet name or ID"
+                >
+            </label>
+
+            <label class="status-filter">
+                <select name="status">
+                    <option value="">All statuses</option>
+                    <option value="available">Available</option>
+                    <option value="pending">Pending</option>
+                    <option value="adopted">Adopted</option>
+                </select>
+            </label>
+
+            <button type="button" class="filter-button">
+                Filter
+            </button>
+
+        </section>
+
+        <!-- Pet Records -->
+        <section class="pets-table-card">
+
+            <div class="pets-table-scroll">
+                <table class="pets-table">
+
+                    <thead>
+                        <tr>
+                            <th>Pet</th>
+                            <th>Details</th>
+                            <th>Status</th>
+                            <th>Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- Pet 1 -->
+                        <tr>
+                            <td>
+                                <div class="pet-table-profile">
+                                    <img src="images/pets/luna.webp" alt="Luna the dog">
+                                    <span>Luna</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pet-details">
+                                    <span>Shepherd mix</span>
+                                    <small>2 years</small>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="pet-status available">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td>May 12, 2025</td>
+
+                            <td>
+                                <div class="pet-actions">
+                                    <a href="pet-details.html">View</a>
+                                    <a href="edit-pet.html">Edit</a>
+                                    <button type="button" class="delete-action">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Pet 2 -->
+                        <tr>
+                            <td>
+                                <div class="pet-table-profile">
+                                    <img
+                                        src="images/pets/archie.jpg" alt="the cat">
+                                    <span>Olive</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pet-details">
+                                    <span>Domestic shorthair</span>
+                                    <small>1 year</small>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="pet-status available">
+                                    Available
+                                </span>
+                            </td>
+
+                            <td>May 10, 2025</td>
+
+                            <td>
+                                <div class="pet-actions">
+                                    <a href="pet-details.html">View</a>
+                                    <a href="edit-pet.html">Edit</a>
+                                    <button type="button" class="delete-action">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Pet 3 -->
+                        <tr>
+                            <td>
+                                <div class="pet-table-profile">
+                                    <img
+                                        src="images/pets/olive.jpg" alt="the dog">
+                                    <span>Archie</span>
+                                </div>
+                            </td>
+
+                            <td>
+                                <div class="pet-details">
+                                    <span>Labrador mix</span>
+                                    <small>4 years</small>
+                                </div>
+                            </td>
+
+                            <td>
+                                <span class="pet-status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                            <td>May 08, 2025</td>
+
+                            <td>
+                                <div class="pet-actions">
+                                    <a href="pet-details.html">View</a>
+                                    <a href="edit-pet.html">Edit</a>
+                                    <button type="button" class="delete-action">
+                                        Delete
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table Footer -->
+            <div class="pets-table-footer">
+                <p>Showing <strong>3</strong> of <strong>18</strong> pets</p>
+
+                <div class="pagination">
+                    <button type="button" disabled>Previous</button>
+                    <button type="button" class="current-page">1</button>
+                    <button type="button">2</button>
+                    <button type="button">3</button>
+                    <button type="button">Next</button>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
